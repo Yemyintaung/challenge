@@ -1,0 +1,12 @@
+<resources>
+
+  <style name="PrimaryTextView">
+    <item name="android:textColor">@color/textColorPrimary</item>
+    <item name="android:textSize">@dimen/text_size_menu_material</item>
+  </style>
+
+  <style name="MediumTextView" parent="PrimaryTextView">
+    <item name="android:textSize">@dimen/text_size_medium_material</item>
+  </style>
+
+</resources>

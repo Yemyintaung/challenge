@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.home.list.HomeActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/activity_home_guide_horizon_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="37dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/activity_home_guide_horizon_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/activity_home_guide_horizon_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/activity_home_guide_vertical_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/activity_home_guide_vertical_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/activity_home_guide_vertical_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/activity_home_edit_amount_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/spacing_small"
+        android:padding="@dimen/spacing_small"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/activity_home_guide_horizon_2"
+        app:layout_constraintLeft_toRightOf="@+id/activity_home_guide_vertical_1"
+        app:layout_constraintRight_toLeftOf="@+id/activity_home_guide_vertical_2"
+        app:layout_constraintTop_toBottomOf="@+id/activity_home_guide_horizon_1" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/activity_home_spinner_currency_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/spacing_small"
+        android:padding="@dimen/spacing_small"
+        app:layout_constraintBottom_toTopOf="@+id/activity_home_guide_horizon_2"
+        app:layout_constraintLeft_toRightOf="@+id/activity_home_guide_vertical_2"
+        app:layout_constraintRight_toLeftOf="@+id/activity_home_guide_vertical_3"
+        app:layout_constraintTop_toBottomOf="@+id/activity_home_guide_horizon_1" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/activity_home_edit_amount_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/spacing_small"
+        android:padding="@dimen/spacing_small"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/activity_home_guide_horizon_3"
+        app:layout_constraintLeft_toRightOf="@+id/activity_home_guide_vertical_1"
+        app:layout_constraintRight_toLeftOf="@+id/activity_home_guide_vertical_2"
+        app:layout_constraintTop_toBottomOf="@+id/activity_home_guide_horizon_2" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/activity_home_text_currency_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/spacing_small"
+        android:text="@string/CURRENCY_USD"
+        android:textSize="15sp"
+        android:gravity="start"
+        android:textColor="@color/black"
+        android:padding="@dimen/spacing_medium"
+        app:layout_constraintBottom_toTopOf="@+id/activity_home_guide_horizon_3"
+        app:layout_constraintLeft_toRightOf="@+id/activity_home_guide_vertical_2"
+        app:layout_constraintRight_toLeftOf="@+id/activity_home_guide_vertical_3"
+        app:layout_constraintTop_toBottomOf="@+id/activity_home_guide_horizon_2" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/activity_home_text_exchange_rate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_small"
+        android:padding="@dimen/spacing_small"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_home_guide_vertical_1"
+        app:layout_constraintRight_toRightOf="@+id/activity_home_guide_vertical_3"
+        app:layout_constraintTop_toBottomOf="@+id/activity_home_guide_horizon_3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

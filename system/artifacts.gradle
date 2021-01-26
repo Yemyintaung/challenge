@@ -1,0 +1,26 @@
+android.applicationVariants.all { variant ->
+  variant.resValue "string", "applicationId", variant.applicationId
+
+  def appName = "MyApplication"
+  variant.outputs.all { output ->
+    def newApkName
+    def baseName = "release"
+    def versionName = variant.versionName
+
+    if(output.baseName == "release"){
+    }
+
+    if(output.baseName == "debug") {
+      baseName = "debug"
+      versionName = versionName.replaceAll("-debug","")
+    }
+
+    if(output.baseName == "beta") {
+      baseName = "beta"
+      versionName = versionName.replaceAll("-beta","")
+    }
+
+    newApkName = "${appName}_${versionName}_${versionCode}_${baseName}.apk"
+    output.outputFileName = new File("./", newApkName)
+  }
+}
